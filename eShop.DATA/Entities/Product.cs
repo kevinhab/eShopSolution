@@ -14,7 +14,7 @@ namespace eShop.DATA.Entities
         public decimal Price { get; set; }
         public int  ViewCount { get; set; }
         public DateTime DateCreated { get; set; }
-        public string SeoAlias { get; set; }
+        public string? SeoAlias { get; set; }
         
     }
 }

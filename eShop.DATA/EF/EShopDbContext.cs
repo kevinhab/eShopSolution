@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using eShop.DATA.Entities;
+using Microsoft.EntityFrameworkCore;
 
 namespace eShop.DATA.EF
 {
-    public class EShopDbContext : Microsoft.EntityFrameworkCore.DbContext
+    public class EShopDbContext : DbContext
     {
         public EShopDbContext(DbContextOptions options) : base(options)
         {
