@@ -2,4 +2,4 @@
 
 ## Technologies
 - ASP.NET Core
-- ENtity Framework Core
+- Entity Framework Core
