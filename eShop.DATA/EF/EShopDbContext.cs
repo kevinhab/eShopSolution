@@ -13,7 +13,17 @@ namespace eShop.DATA.EF
         public EShopDbContext(DbContextOptions options) : base(options)
         {
         }
-        
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.ApplyConfiguration(new AppConfigConfiguration());
+            modelBuilder.ApplyConfiguration(new CategoryConfiguration());
+
+            //base.OnModelCreating(modelBuilder);
+            //modelBuilder.Entity<Category>().ToTable("Categories");
+            //modelBuilder.Entity<Product>().ToTable("Products");
+        }
+
         public DbSet<Product> Products { get; set; }
         public DbSet<Category> Categories { get; set; }
     }
